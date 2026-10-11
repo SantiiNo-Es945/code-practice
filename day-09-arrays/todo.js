@@ -1,11 +1,11 @@
 let todos = ["study JS", "study Japanese", "workout"];
 
-todos.push("read a book");
+//Using it with functions:
+function addTodo(task) {
 
-console.log(todos[0]); 
-console.log(todos);
-console.log(todos.length);
+  todos.push(task);
+}
 
-console.log(todos.pop());
+addTodo("read a book");
 
 console.log(todos);
