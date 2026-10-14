@@ -4,8 +4,15 @@ let todos = ["study JS", "study Japanese", "workout"];
 function addTodo(task) {
 
   todos.push(task);
+  console.log(todos);
 }
 
 addTodo("read a book");
+addTodo("call mom");
 
-console.log(todos);
+//this takes a position and uses splice
+function removeTodo(index) {
+    todos.splice(index ,1);
+    console.log(todos);
+}
+removeTodo(2);
