@@ -1,7 +1,7 @@
 let todos = ["study JS", "study Japanese", "workout"];
 
 //Using it with functions:
-function addTodo(task) {
+/*function addTodo(task) {
 
   todos.push(task);
   console.log(todos);
@@ -16,3 +16,11 @@ function removeTodo(index) {
     console.log(todos);
 }
 removeTodo(2);
+
+*///here we work with list, in order to print each task in its own line
+function listTodos() {
+    for (let i = 0; i < todos.length; i++) {
+        console.log(todos[i]);
+    }
+}
+listTodos();
