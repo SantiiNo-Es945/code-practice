@@ -16,9 +16,9 @@ let contacts = [
     {name: "Axel", phone: "15", email: "hhh@gmail"},
     {name: "Gibi", phone: "90", email: "hehehe@gmail"}
 ];
-console.log(contacts[1].name);
+//console.log(contacts[1].name);
 //now we will add contacts
-function addContact(name, phone, email) {
+/*function addContact(name, phone, email) {
     contacts.push({name: name, phone: phone, email: email});
 }
 addContact("Sofia", "999", "que@gmail.com");
@@ -30,4 +30,13 @@ function listContacts () {
         console.log(contacts[i].name);
     }
 }
-listContacts();
+listContacts();*/
+//here we will use findContact to get the phone number through the name of the person
+function findContact(searchName) {
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].name === searchName){
+            console.log(contacts[i].phone);
+        }
+    }
+}
+findContact("Bob");
