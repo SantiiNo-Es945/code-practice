@@ -24,3 +24,10 @@ function addContact(name, phone, email) {
 addContact("Sofia", "999", "que@gmail.com");
 addContact("Mario", "499", "que34@gmail.com");
 console.log(contacts.length);
+// working with a list, a loop over contacts to print each name
+function listContacts () {
+    for (let i = 0; i < contacts.length; i++) {
+        console.log(contacts[i].name);
+    }
+}
+listContacts();
