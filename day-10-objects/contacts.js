@@ -1,0 +1,19 @@
+let contact = {
+    name: "Santi",
+    phone: "123",
+    email: "test@gmail"
+};
+
+//changing values
+contact.email = "test2@gmail";
+//adding a new property
+contact.city = "Fukuoka";
+
+console.log(contact);
+//objects inside an array
+let contacts = [
+    {name: "Monica", phone: "12", email: "1@gmail"},
+    {name: "Axel", phone: "15", email: "hhh@gmail"},
+    {name: "Gibi", phone: "90", email: "hehehe@gmail"}
+];
+console.log(contacts[1].name);
