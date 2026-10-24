@@ -2,6 +2,9 @@ let input = document.getElementById("task-input");
 let btn = document.getElementById("add-btn");
 let list = document.getElementById("task-list");
 btn.addEventListener("click", () => {
+    if (input.value.trim() === "") {
+        return;
+    }
     let newList = document.createElement("li");
     newList.textContent = input.value;
     input.value = "";
