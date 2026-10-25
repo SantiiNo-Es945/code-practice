@@ -10,7 +10,8 @@ btn.addEventListener("click", () => {
     input.value = "";
     list.appendChild(newList);
     let newBtn = document.createElement("button");
-    newBtn.textContent = "x";
+    newBtn.textContent = " x ";
+    newBtn.className = "bg-blue-500 text-white px-4 py-2 rounded";
     newList.appendChild(newBtn);
 
     newBtn.addEventListener("click", () => {
