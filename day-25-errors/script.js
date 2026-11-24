@@ -1,6 +1,9 @@
 async function getTodo() {
   try {
-    const response = await fetch("https://jsonplaceholder.typicodee.com/todos");
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    if (!response.ok) {
+        throw new Error("Request failed: " + response.status);
+    }
     const data = await response.json();
     console.log(data.length);
     const completedTodos = data.filter((todo) => todo.completed);
