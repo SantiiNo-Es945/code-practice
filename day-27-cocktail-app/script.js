@@ -6,6 +6,7 @@ async function search(name) {
     "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + name,
   );
   const data = await response.json();
+  list.textContent = "";
   if (data.drinks === null) {
     return console.log("No drinks found");
   }
