@@ -10,12 +10,14 @@ async function search(name) {
     return console.log("No drinks found");
   }
   console.log(data.drinks.length);
-  data.drinks.forEach((drink) => console.log(drink.strDrink));
+  data.drinks.forEach((drink) => {
+    let newList = document.createElement("li");
+    newList.textContent = drink.strDrink;
+    list.appendChild(newList);
+  });
 }
 
 btn.addEventListener("click", () => {
-  let newList = document.createElement("li");
-  newList.textContent = input.value;
   console.log(input.value);
   search(input.value);
 });
