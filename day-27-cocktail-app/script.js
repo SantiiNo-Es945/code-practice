@@ -7,10 +7,13 @@ async function search(name) {
   );
   const data = await response.json();
   list.textContent = "";
+
   if (data.drinks === null) {
-    return console.log("No drinks found");
+    list.textContent = "No drinks found";
+    return
   }
   console.log(data.drinks.length);
+
   data.drinks.forEach((drink) => {
     let newList = document.createElement("li");
     newList.textContent = drink.strDrink;
@@ -20,5 +23,5 @@ async function search(name) {
 
 btn.addEventListener("click", () => {
   console.log(input.value);
-  search(input.value);
+  search(input.value.trim());
 });
